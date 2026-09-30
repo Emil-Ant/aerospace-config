@@ -160,9 +160,14 @@ alt-shift-l = ['join-with right', 'mode main']
 
 # Always float TablePlus
 # This is a workaround for the fact that TablePlus treats each different connection as a different window
-# [[on-window-detected]]
-# if.app-id = "com.tinyapp.TablePlus"
-# run = "layout floating"
+[[on-window-detected]]
+    if.app-id = 'com.tinyapp.TablePlus'
+    run = 'layout floating'
+
+# Always float Finder
+[[on-window-detected]]
+    if.app-id = 'com.apple.finder'
+    run = 'layout floating'
 
 
 # code below makes specific app load in specific workspace
